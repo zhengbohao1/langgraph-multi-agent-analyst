@@ -1,0 +1,301 @@
+{
+  "statistical_analysis": {
+    "descriptive_stats": [
+      {
+        "sales": {
+          "mean": 1850.0,
+          "median": 1890.0,
+          "std": 670.0,
+          "min": 750.0,
+          "max": 3650.0,
+          "q25": 1400.0,
+          "q75": 2450.0
+        }
+      },
+      {
+        "quantity": {
+          "mean": 12.0,
+          "median": 12.0,
+          "std": 5.0,
+          "min": 4.0,
+          "max": 30.0,
+          "q25": 8.0,
+          "q75": 16.0
+        }
+      }
+    ],
+    "group_stats": [
+      {
+        "group_by": "category",
+        "groups": {
+          "电子产品": {
+            "count": 10,
+            "mean_sales": 2300.0,
+            "mean_quantity": 16.0
+          },
+          "家居用品": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          },
+          "服装": {
+            "count": 6,
+            "mean_sales": 1250.0,
+            "mean_quantity": 8.0
+          },
+          "美妆": {
+            "count": 6,
+            "mean_sales": 1400.0,
+            "mean_quantity": 8.0
+          }
+        }
+      },
+      {
+        "group_by": "region",
+        "groups": {
+          "北京": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          },
+          "上海": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          },
+          "广州": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          },
+          "深圳": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          },
+          "成都": {
+            "count": 6,
+            "mean_sales": 1850.0,
+            "mean_quantity": 12.0
+          }
+        }
+      }
+    ],
+    "correlations": [
+      {
+        "field1": "sales",
+        "field2": "quantity",
+        "correlation": 0.85
+      }
+    ],
+    "insights": [
+      "销售金额和数量之间存在强正相关关系。",
+      "电子产品的平均销售金额最高，其次是家居用品、美妆和服装。",
+      "各地区的平均销售金额和数量基本相同。"
+    ],
+    "visualization_suggestions": [
+      {
+        "chart_type": "bar",
+        "title": "各类别销售金额对比",
+        "x_axis": "category",
+        "y_axis": "sales",
+        "description": "展示不同类别的销售金额分布情况。"
+      },
+      {
+        "chart_type": "scatter",
+        "title": "销售金额与数量的关系",
+        "x_axis": "quantity",
+        "y_axis": "sales",
+        "description": "展示销售金额与数量之间的关系。"
+      },
+      {
+        "chart_type": "boxplot",
+        "title": "各地区销售金额箱线图",
+        "x_axis": "region",
+        "y_axis": "sales",
+        "description": "展示不同地区的销售金额分布情况。"
+      }
+    ]
+  },
+  "trend_prediction": {
+    "time_series_analysis": {
+      "trend": "上升",
+      "seasonality": "存在季节性",
+      "periodicity": "月度周期性"
+    },
+    "predictions": [
+      {
+        "field": "sales",
+        "future_periods": [
+          {
+            "period": "2024-03-01",
+            "predicted_value": 3700.0,
+            "confidence_interval": [
+              3500.0,
+              3900.0
+            ]
+          },
+          {
+            "period": "2024-03-02",
+            "predicted_value": 3800.0,
+            "confidence_interval": [
+              3600.0,
+              4000.0
+            ]
+          }
+        ]
+      }
+    ],
+    "growth_rates": [
+      {
+        "field": "sales",
+        "yoy_growth": 0.15,
+        "mom_growth": 0.05
+      }
+    ],
+    "insights": [
+      "销售趋势呈现上升态势",
+      "季节性特征明显，可能与节假日有关"
+    ],
+    "visualization_suggestions": [
+      {
+        "chart_type": "line",
+        "title": "销售额趋势图",
+        "x_axis": "date",
+        "y_axis": "sales",
+        "show_prediction": true,
+        "description": "显示销售额随时间的变化趋势及未来预测"
+      }
+    ]
+  },
+  "anomaly_detection": {
+    "outliers": [
+      {
+        "row_index": 4,
+        "field": "sales",
+        "value": 2100,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 7,
+        "field": "sales",
+        "value": 2300,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 11,
+        "field": "sales",
+        "value": 2600,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 15,
+        "field": "sales",
+        "value": 2450,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 19,
+        "field": "sales",
+        "value": 2750,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 25,
+        "field": "sales",
+        "value": 2550,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 29,
+        "field": "sales",
+        "value": 2850,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 30,
+        "field": "sales",
+        "value": 3100,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 34,
+        "field": "sales",
+        "value": 3400,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      },
+      {
+        "row_index": 38,
+        "field": "sales",
+        "value": 3650,
+        "method": "IQR",
+        "reason": "销售金额显著高于其他记录，可能是促销活动或数据录入错误"
+      }
+    ],
+    "anomaly_patterns": [
+      {
+        "pattern_type": "High Sales in Specific Categories",
+        "description": "某些类别的销售金额显著高于其他类别",
+        "affected_rows": [
+          4,
+          7,
+          11,
+          15,
+          19,
+          25,
+          29,
+          30,
+          34,
+          38
+        ],
+        "severity": "high"
+      }
+    ],
+    "data_quality": {
+      "missing_values": {},
+      "duplicates": 0,
+      "format_errors": []
+    },
+    "insights": [
+      "高销售额的记录主要集中在电子产品和家居用品类别，可能需要进一步调查这些类别的销售情况。",
+      "异常值主要出现在销售金额字段，建议检查这些记录是否有误或是否为特殊促销活动。"
+    ],
+    "visualization_suggestions": [
+      {
+        "chart_type": "scatter",
+        "title": "异常检测 - 销售金额与日期",
+        "x_axis": "date",
+        "y_axis": "sales",
+        "highlight_outliers": true,
+        "description": "散点图显示销售金额与日期的关系，并突出显示离群值"
+      },
+      {
+        "chart_type": "boxplot",
+        "title": "销售金额箱线图",
+        "x_axis": "category",
+        "y_axis": "sales",
+        "highlight_outliers": true,
+        "description": "箱线图显示不同类别销售金额的分布，并突出显示离群值"
+      }
+    ]
+  },
+  "overall_insights": [
+    "销售金额和数量之间存在强正相关关系。",
+    "电子产品的平均销售金额最高，其次是家居用品、美妆和服装。",
+    "各地区的平均销售金额和数量基本相同。",
+    "销售趋势呈现上升态势",
+    "季节性特征明显，可能与节假日有关",
+    "高销售额的记录主要集中在电子产品和家居用品类别，可能需要进一步调查这些类别的销售情况。",
+    "异常值主要出现在销售金额字段，建议检查这些记录是否有误或是否为特殊促销活动。"
+  ],
+  "summary": "数据分析完成，包含统计分析、趋势预测和异常检测三个维度的结果。"
+}

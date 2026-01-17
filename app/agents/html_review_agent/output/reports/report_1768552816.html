@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据分析仪表盘</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ecf0f1;
+            color: #34495e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #ffffff;
+            margin-bottom: 30px;
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .chart-description {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .nav-link {
+            font-size: 14px;
+            color: #34495e;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3498db;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .content {
+            margin-top: 50px;
+        }
+        .footer {
+            height: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+            }
+            .content {
+                margin-top: 0;
+            }
+            .chart-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content container flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://mdn.alipayobjects.com/one_clip/afts/img/eKbIQ43xG4kAAAAARSAAAAgAoEACAQFr/original" alt="Logo" class="h-8 mr-2">
+                <span class="text-lg font-bold">数据分析仪表盘</span>
+            </div>
+            <div class="navbar-menu">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#statistics" class="nav-link">统计分析</a>
+                <a href="#trends" class="nav-link">趋势预测</a>
+                <a href="#anomalies" class="nav-link">异常检测</a>
+            </div>
+            <button class="navbar-toggle p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">
+                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="content container">
+        <section id="home" class="mt-10">
+            <h1 class="text-3xl font-bold mb-4">数据分析仪表盘</h1>
+            <p class="text-gray-600">这是一个现代化的数据分析仪表盘，展示销售数据的统计分析、趋势预测和异常检测结果。</p>
+        </section>
+
+        <section id="statistics" class="mt-10">
+            <h2 class="section-title">统计分析</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="chart-container">
+                    <div class="chart-title">销售金额与数量关系</div>
+                    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/eKbIQ43xG4kAAAAARSAAAAgAoEACAQFr/original" alt="销售金额与数量关系" class="w-full h-auto">
+                    <p class="chart-description">销售金额和数量之间存在强正相关关系。</p>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">各类别平均销售金额</div>
+                    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/lFaeR785Zb8AAAAARKAAAAgAoEACAQFr/original" alt="各类别平均销售金额" class="w-full h-auto">
+                    <p class="chart-description">电子产品的平均销售金额最高，其次是家居用品、美妆和服装。</p>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">各地区平均销售金额</div>
+                    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/N-T_TJ_LOSIAAAAAR-AAAAgAoEACAQFr/original" alt="各地区平均销售金额" class="w-full h-auto">
+                    <p class="chart-description">各地区的平均销售金额和数量基本相同。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trends" class="mt-10">
+            <h2 class="section-title">趋势预测</h2>
+            <div class="chart-container">
+                <div class="chart-title">销售趋势预测</div>
+                <img src="https://mdn.alipayobjects.com/one_clip/afts/img/UwpWR7RyOe4AAAAARqAAAAgAoEACAQFr/original" alt="销售趋势预测" class="w-full h-auto">
+                <p class="chart-description">销售趋势呈现上升态势，季节性特征明显，可能与节假日有关。</p>
+            </div>
+        </section>
+
+        <section id="anomalies" class="mt-10">
+            <h2 class="section-title">异常检测</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="chart-container">
+                    <div class="chart-title">高销售额记录分布</div>
+                    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/QdNCQo2S1qYAAAAARNAAAAgAoEACAQFr/original" alt="高销售额记录分布" class="w-full h-auto">
+                    <p class="chart-description">高销售额的记录主要集中在电子产品和家居用品类别，可能需要进一步调查这些类别的销售情况。</p>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">异常值检测</div>
+                    <img src="https://mdn.alipayobjects.com/one_clip/afts/img/yObmRLq4168AAAAARgAAAAgAoEACAQFr/original" alt="异常值检测" class="w-full h-auto">
+                    <p class="chart-description">异常值主要出现在销售金额字段，建议检查这些记录是否有误或是否为特殊促销活动。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 数据分析仪表盘. All rights reserved.</p>
+    </div>
+
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
